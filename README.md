@@ -16,7 +16,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://medini-rajendra.github.io/Webpack-Project/)
+[Live Demo Link](https://medini-rajendra.github.io/ToDoList-Review/dist/)
 
 
 ## Getting Started
