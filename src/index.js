@@ -76,7 +76,16 @@ const moveList = () => {
   const list = TodoList.getList();
   if (list.length >= 2) {
     let indval = list[0].index;
-    for (let i = 1; i < list.length; i += 1) {
+    list.forEach((item, i) => {
+      if (item.index > indval) {
+        indval = item.index;
+      } else {
+        const temp = item;
+        item = item[i - 1];
+        item[i - 1] = temp;
+      }
+    });
+    /* for (let i = 1; i < list.length; i += 1) {
       if (list[i].index > indval) {
         indval = list[i].index;
       } else {
@@ -84,7 +93,7 @@ const moveList = () => {
         list[i] = list[i - 1];
         list[i - 1] = temp;
       }
-    }
+    } */
   }
   localStorage.setItem('list', JSON.stringify(list));
 };
